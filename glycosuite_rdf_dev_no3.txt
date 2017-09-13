@@ -1,0 +1,44 @@
+@prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#>.
+@prefix glyconnect: <http://biohackathon.org/resource/glyconnect#>.
+@prefix gcs: <http://biohackathon.org/resource/glyconnect/structure/>.
+@prefix gcgs: <http://biohackathon.org/resource/glyconnect/glycosylation_site/>.
+@prefix gcl: <http://biohackathon.org/resource/glyconnect/location>.
+@prefix gcp: <http://biohackathon.org/resource/protein/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix up: <http://www.uniprot.org/core/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+## Known saccharide, protein
+## Unknown glycosylation site, exact positon
+## using blank node 
+
+### Saccharide
+gcs:4281
+	a glycan:Saccharide;
+	glycan:glycosylates gcgs:14_0_4281.
+
+### Glycosylation_site
+gcgs:14_0_4281
+	faldo:location gcl:14_0_4281.
+
+### Exact Position
+gcl:14_0_4281
+	faldo:reference gcp:14.
+
+### Protein
+gcp:14
+	a up:Protein;
+	rdfs:label "Alpha-1-Acid Glycoprotein";
+	foaf:primaryTopic <http://purl.uniprot.org/uniprot/P19652>;
+	foaf:primaryTopic <http://purl.uniprot.org/uniprot/P02763>.
+
+
+
+# 14	
+# Alpha-1-Acid Glycoprotein	
+# Homo Sapiens	
+# P19652
+# P02763	
+

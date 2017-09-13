@@ -1,0 +1,61 @@
+@prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#>.
+@prefix glyconnect: <http://biohackathon.org/resource/glyconnect#>.
+@prefix gcs: <http://biohackathon.org/resource/glyconnect/structure/>.
+@prefix gcgs: <http://biohackathon.org/resource/glyconnect/glycosylation_site/>.
+@prefix gcl: <http://biohackathon.org/resource/glyconnect/>.
+@prefix gcp: <http://biohackathon.org/resource/protein/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix up: <http://www.uniprot.org/core/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+### Saccharide
+gcs:8118 
+	a glycan:Saccharide;
+	glycan:glycosylates gcgs:730_1424.
+
+gcs:8048 
+	a glycan:Saccharide;
+	rdfs:seeAlso <https://glytoucan.org/Structures/Glycans/G22208HN>;
+	foaf:primaryTopic <https://glytoucan.org/Structures/Glycans/G22208HN>;
+	glycan:glycosylates gcgs:730_1424.
+
+gcs:8128 
+	a glycan:Saccharide;
+	glycan:glycosylates gcgs:730_869.
+
+
+### Glycosylation_site
+gcgs:730_869 
+	a glycan:Glycosylation_site;
+	faldo:location gcl:730_869.
+
+gcgs:730_1424 
+	a glycan:Glycosylation_site;
+	faldo:location gcl:730_1424.
+
+
+### Exact Position.
+gcl:730_869 
+	a faldo:ExactPosition;
+	faldo:position "869"^^xsd:int;
+	rdfs:seeAlso <http://www.uniprot.org/blast/?about=P01023[872]>;
+	faldo:reference gcp:730.
+
+gcl:730_1424 
+	a faldo:ExactPosition;
+	faldo:position "1424"^^xsd:int;
+	faldo:reference gcp:730.
+
+
+### Protein
+gcp:730 
+	a up:Protein;
+	rdfs:label "Alpha-2-macroglobulin";
+	rdfs:seeAlso <http://purl.uniprot.org/uniprot/P01023>.
+
+
+
+
+

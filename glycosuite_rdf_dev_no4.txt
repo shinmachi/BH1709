@@ -1,0 +1,76 @@
+@prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#>.
+@prefix glyconnect: <http://biohackathon.org/resource/glyconnect#>.
+@prefix gcs: <http://biohackathon.org/resource/glyconnect/structure/>.
+@prefix gcgs: <http://biohackathon.org/resource/glyconnect/glycosylation_site/>.
+@prefix gcl: <http://biohackathon.org/resource/glyconnect/locations/>.
+@prefix gclp: <http://biohackathon.org/resource/glyconnect/locations/position/>.
+@prefix gcp: <http://biohackathon.org/resource/protein/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix up: <http://www.uniprot.org/core/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+## Fuzzy positongg
+## one saccharide, some glycosylation site
+
+### Saccharide
+gcs:4225 
+	a glycan:Saccharide;
+	foaf:primaryTopic <https://identifiers.org/G10225UW>;
+	rdfs:seeAlso <https://glytoucan.org/Structures/Glycans/G10225UW>;
+	glycan:glycosylates gcgs:285_666o118o675o691o673.
+
+
+### Glycosylation_site
+gcgs:285_666o118o675o691o673
+	a glycan:Glycosylation_site;
+	faldo:location gcl:285_666o118o675o691o673.
+
+
+### One Of Position
+gcl:285_666o118o675o691o673
+	a faldo:OneOfPosition;
+	faldo:location gclp:285_666;
+	faldo:location gclp:285_118;
+	faldo:location gclp:285_675;
+	faldo:location gclp:285_691;
+	faldo:location gclp:285_673.
+
+
+### Exact Position
+gclp:285_666
+	a faldo:ExactPosition;
+	faldo:position "666"^^xsd:int;
+	faldo:reference gcp:285.
+gclp:285_118
+	a faldo:ExactPosition;
+	faldo:position "118"^^xsd:int;
+	faldo:reference gcp:285.
+gclp:285_675
+	a faldo:ExactPosition;
+	faldo:position "675"^^xsd:int;
+	faldo:reference gcp:285.
+gclp:285_691
+	a faldo:ExactPosition;
+	faldo:position "691"^^xsd:int;
+	faldo:reference gcp:285.
+gclp:285_673
+	a faldo:ExactPosition;
+	faldo:position "673"^^xsd:int;
+	faldo:reference gcp:285.
+
+
+### Protein
+gcp:285 
+	a up:Protein;
+	rdfs:label "Inter-Alpha-Trypsin Inhibitor Heavy Chain H2";
+	foaf:primaryTopic <http://identifiers.org/uniprot/P19823>;
+	rdfs:seeAlso <http://purl.uniprot.org/uniprot/P19823>.
+
+
+# Thr-666 / CAR_000214
+# Asn-118 / CAR_000140
+# Thr-675 / CAR_000216
+# Thr-691 / CAR_000217
+# Ser-673 / CAR_000215

@@ -1,0 +1,97 @@
+prefix up: <http://purl.uniprot.org/core/> 
+prefix ns1: <> 
+prefix ncbi: <	
+http://purl.bioontology.org/ontology/NCBITAXON/>
+
+<http://purl.uniprot.org/taxonomy/9606>
+	a up:Taxon, ncbi:9606 ;
+	rdfs:label "Homo sapiens";
+	ns1:common_name "Human".
+
+
+<http://purl.uniprot.org/taxonomy/9606> a up:Taxon
+<http://purl.uniprot.org/taxonomy/9606> a ncbi:9606 
+<http://purl.uniprot.org/taxonomy/9606>	rdfs:label "Homo sapiens"
+<http://purl.uniprot.org/taxonomy/9606>	ns1:common_name "Human"
+
+
+<> has
+
+<> a :Protein
+<> hasTaxonomy <http://purl.uniprot.org/taxonomy/9606>
+
+<http://purl.uniprot.org/taxonomy/9606>
+	a up:Taxon, ncbi:9606 ;
+	rdfs:label "Homo sapiens";
+	ns1:common_name "Human".
+
+
+http://biohackathon.org/resource/faldo#OneOfPosition
+what is iri for glycosylated site?
+necessary info
+	 protein 
+
+Glycosylated AA
+Glycosylation site
+Glycan binding site
+
+
+
+prefix faldo: <http://biohackathon.org/resource/faldo#>
+prefix glyconnect: <http://biohackathon.org/resource/glyconnect#>
+
+glyconnect:structure/8118 a :Saccharide.
+glyconnect:structure/8118 :glycosylates glyconnect:glycosylation_site/730_1424.
+
+glyconnect:glycosylation_site/730_1424 a :Glycosylation_site.
+glyconnect:glycosylation_site/730_1424 faldo:location glyconnect:locations/730_1424.
+
+glyconnect:locations/730_1424 a faldo:ExactPosition.
+glyconnect:locations/730_1424 faldo:position "1424"^^xsd:int.
+glyconnect:locations/730_1424 faldo:reference glyconnect:uniprot/730.
+
+
+glyconnect:structure/8048 a :Saccharide.
+glyconnect:structure/8048 rdfs:seeAlso <https://glytoucan.org/Structures/Glycans/G22208HN>.
+glyconnect:structure/8048 :glycosylates glyconnect:glycosylation_site/730_1424.
+
+glyconnect:glycosylation_site/730_1424 a :Glycosylation_site.
+glyconnect:glycosylation_site/730_1424 faldo:location glyconnect:locations/730_1424.
+
+glyconnect:locations/730_1424 a faldo:ExactPosition.
+glyconnect:locations/730_1424 faldo:position "1424"^^xsd:int.
+glyconnect:locations/730_1424 faldo:reference glyconnect:uniprot/730.
+
+
+glyconnect:structure/8128 a :Saccharide.
+glyconnect:structure/8128 :glycosylates glyconnect:glycosylation_site/730_869.
+
+glyconnect:glycosylation_site/730_869 a :Glycosylation_site.
+glyconnect:glycosylation_site/730_869 faldo:location glyconnect:locations/730_869.
+
+glyconnect:locations/730_869 a faldo:ExactPosition.
+glyconnect:locations/730_869 faldo:position "869"^^xsd:int.
+glyconnect:locations/730_869 rdfs:seeAlso <http://www.uniprot.org/blast/?about=P01023[872]>.
+glyconnect:locations/730_869 faldo:reference glyconnect:protein/730.
+
+
+glyconnect:protein/730 a up:Protein.
+glyconnect:protein/730 rdfs:label "Alpha-2-macroglobulin".
+glyconnect:protein/730 rdfs:seeAlso <http://purl.uniprot.org/uniprot/P01023>.
+
+
+protein_id_from_uniprot_acc	structure_id
+730	8128
+730	8118
+730	8048
+
+
+http://www.uniprot.org/locations/P01023_869
+http://purl.uniprot.org/locations/P01023_869
+
+ protein	uniprot	amino_acid_position
+Alpha-2-macroglobulin	P01023	869
+Alpha-2-macroglobulin	P01023	1424
+
+
+
