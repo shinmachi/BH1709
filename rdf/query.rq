@@ -1,0 +1,26 @@
+PREFIX glycan: <http://purl.jp/bio/12/glyco/glycan#> 
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX glyconnect: <http://biohackathon.org/resource/glyconnect#>
+PREFIX gcs: <http://biohackathon.org/resource/glyconnect/structure/>
+PREFIX gcgs: <http://biohackathon.org/resource/glyconnect/glycosylation_site/>
+PREFIX gcl: <http://biohackathon.org/resource/glyconnect/locations/>
+PREFIX gclp: <http://biohackathon.org/resource/glyconnect/locations/position/>
+PREFIX gcp: <http://biohackathon.org/resource/protein/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX up: <http://www.uniprot.org/core/> 
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/> 
+
+# Saccharide, Glycosylation site, Protein name
+
+SELECT DISTINCT ?s  (STR(?position) AS ?site) ?protein_name
+WHERE{
+	?s a glycan:Saccharide.
+	?s glycan:glycosylates ?gs.
+	?gs faldo:location ?oneof.
+	?oneof faldo:location ?exact_p.
+	?exact_p faldo:position ?position.
+	?exact_p faldo:reference ?protein.
+	?protein rdfs:label ?protein_name.
+}
+
