@@ -1,42 +1,41 @@
-P1 is_a :Protein
-P1 is_a :Glycoprotein
-
-## New classes
-glycan:Disease_association
-
-## New properties
-glycan:has_protein
-glycan:has_association
-glycan:is_glycosylated_by
-glycan:is_glycosylated_on
-
+@prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#>.
+@prefix glyconnect: <http://biohackathon.org/resource/glyconnect#>.
+@prefix gcs: <http://biohackathon.org/resource/glyconnect/structure/>.
+@prefix gcgs: <http://biohackathon.org/resource/glyconnect/glycosylation_site/>.
+@prefix gcl: <http://biohackathon.org/resource/glyconnect/locations/>.
+@prefix gclp: <http://biohackathon.org/resource/glyconnect/locations/position/>.
+@prefix gcp: <http://biohackathon.org/resource/protein/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix up: <http://www.uniprot.org/core/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 
 <glycoprotein>
 	a glycan:Glycoprotein, glycan:Protein;
-	rdfs:label "protein name"
+	rdfs:label "protein name";
 	glycan:has_attached_glycan <saccharide>;
 	glycan:is_glycosylated_on <glycosylation site>;
 	glycan:has_reference <referenced comound>.
 
 <referenced comound>
-	a glycan:Referenced_compound
-	glycan:has_protein <protein>
-	glycan:published_in <citation> 
-	glycan:is_from_source <source_natural>
-	glycan:has_association <disease association>
+	a glycan:Referenced_compound;
+	glycan:has_protein <protein>;
+	glycan:published_in <citation>; 
+	glycan:is_from_source <source_natural>;
+	glycan:has_association <disease association>.
 
 <source_natural>
 	a glycan:Source_natural;
 	glycan:has_taxon <taxonomy>;
-	glycan:has_tissue "tissue" # tissue page url from glyconnect
-	glycan:has_cell_line "cell_line"
+	glycan:has_tissue "tissue"; # tissue page url from glyconnect
+	glycan:has_cell_line "cell_line";
 
-<http://purl.uniprot.org/taxonomy/9606>
-	a up:Taxon, ncbi:9606 ;
-	rdfs:label "Homo sapiens";
-	ns1:common_name "Human".
+<taxonomy>
+	a up:Taxon;
+	rdfs:label "taxon name"; # ex: Homo sapiens
+	up:commonName "common name". # ex: Human
 
 <disease association> 
 	a glycan:Disease_association, sio:SIO_000897; # association
@@ -44,18 +43,30 @@ glycan:is_glycosylated_on
 	sio:SIO_000628 <referenced compound>. # refers to
 
 <disease glyconnect url>
-	a obo:DOID_9351;
+	a obo:DOID_9351; # using disease ontology class
 	rdfs:labl "disease name";
 	rdf:values "DOID:9351".
 
 	
-
-
-
-
-
-
-
-
+## Memo
+# P1 is_a :Protein
+# P1 is_a :Glycoprotein
 # <Saccharide> glycan:glycosylates <Glycosylation site>
 # <Glycosylation site> glycan:is_glycosylated_by <Saccharide>
+
+## New classes
+# glycan:Disease_association
+
+## New properties
+# glycan:has_protein
+# glycan:has_association
+# glycan:is_glycosylated_by
+# glycan:is_glycosylated_on
+
+
+
+
+
+
+
+
