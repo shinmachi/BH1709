@@ -1,0 +1,45 @@
+@prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#>.
+@prefix glyconnect: <http://biohackathon.org/resource/glyconnect#>.
+@prefix gcs: <http://biohackathon.org/resource/glyconnect/structure/>.
+@prefix gcgs: <http://biohackathon.org/resource/glyconnect/glycosylation_site/>.
+@prefix gcl: <http://biohackathon.org/resource/glyconnect/locations/>.
+@prefix gclp: <http://biohackathon.org/resource/glyconnect/locations/position/>.
+@prefix gcp: <http://biohackathon.org/resource/protein/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix up: <http://www.uniprot.org/core/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+## taxon
+## one saccharide, no glycosylation site, no protein
+## blank node => _:"prefix"_"protein-id"_"position"_"structure-id"
+
+# Saccharide
+gcs:96 
+	a glycan:Saccharide;
+	foaf:primaryTopic <https://identifiers.org/G01614ZM>;
+	rdfs:seeAlso <https://glytoucan.org/Structures/Glycans/G01614ZM>;
+	glycan:glycosylates _:gcgs_0_0_96.
+
+# Glycosylation site
+_:gcgs_0_0_96
+	faldo:location _:gclp_0_0_96.
+
+# Exact position
+_:gclp_0_0_96
+	faldo:reference _:gcp_0_0_96.
+
+# Protein
+_:gcp_0_0_96
+
+
+
+# Reference : caitation
+# Taxonomy
+# Tissue
+# Disease
+
+# structure_id	glytoucan_id	protein_id	uniprot	pmid	aa_glyco	taxonomy_id	tissue_id	tissue_name	uberon_id	disease_id
+
+# 96	G01614ZM			3447438		9606	75	Ultrafiltrate		1
