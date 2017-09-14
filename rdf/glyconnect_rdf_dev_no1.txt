@@ -1,0 +1,37 @@
+@prefix up: <http://www.uniprot.org/core/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+<glycoprotein>
+	a glycan:Glycoprotein, glycan:Protein;
+	rdfs:label "protein name"
+	glycan:has_attached_glycan <saccharide>;
+	glycan:is_glycosylated_on <glycosylation site>;
+	glycan:has_reference <referenced comound>.
+
+<referenced comound>
+	a glycan:Referenced_compound
+	glycan:has_protein <protein>
+	glycan:published_in <citation> 
+	glycan:is_from_source <source_natural>
+	glycan:has_association <disease association>
+
+<source_natural>
+	a glycan:Source_natural;
+	glycan:has_taxon <taxonomy>;
+	glycan:has_tissue "tissue" # tissue page url from glyconnect
+	glycan:has_cell_line "cell_line"
+
+<http://purl.uniprot.org/taxonomy/9606>
+	a up:Taxon, ncbi:9606 ;
+	rdfs:label "Homo sapiens";
+	ns1:common_name "Human".
+
+<disease association> 
+	a glycan:Disease_association, sio:SIO_000897; # association
+	sio:SIO_000628 <disease  glyconnect url>; # refers to
+	sio:SIO_000628 <referenced compound>. # refers to
+
+<disease glyconnect url>
+	a obo:DOID_9351;
+	rdfs:labl "disease name";
+	rdf:values "DOID:9351".
