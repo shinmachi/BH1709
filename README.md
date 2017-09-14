@@ -1,6 +1,9 @@
 # BH1709
 Developing Glycan RDF
 
+## ARQ Download
+
+* https://jena.apache.org/download/index.cgi
 
 ## ARQ Setting up your Environment (ARQ does not include this repository)
 * https://jena.apache.org/documentation/tools/index.html
