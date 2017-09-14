@@ -1,0 +1,32 @@
+development-memo
+
+> glycosuite_rdf_dev_no2.txt
+glycan 1
+site 1
+protein 1
+
+> glycosuite_rdf_dev_no3.txt
+* Known saccharide, protein
+* Unknown glycosylation site, exact positon
+* Using blank node 
+glycan 1
+site 0
+protein 1
+
+> glycosuite_rdf_dev_no4.txt
+* Fuzzy positongg
+* one saccharide, some glycosylation site
+glycan 1
+site many
+protein 1
+
+> glycosuite_rdf_dev_no5.txt
+## one saccharide, no glycosylation site, no protein
+## blank node => _:"prefix"_"protein-id"_"position"_"structure-id"
+glycna 1
+site 0
+protein 0
+
+
+
+
