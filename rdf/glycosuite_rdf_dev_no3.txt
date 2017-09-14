@@ -4,6 +4,7 @@
 @prefix gcs: <http://biohackathon.org/resource/glyconnect/structure/>.
 @prefix gcgs: <http://biohackathon.org/resource/glyconnect/glycosylation_site/>.
 @prefix gcl: <http://biohackathon.org/resource/glyconnect/location>.
+@prefix gclp: <http://biohackathon.org/resource/glyconnect/location/position>.
 @prefix gcp: <http://biohackathon.org/resource/protein/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -17,14 +18,14 @@
 ### Saccharide
 gcs:4281
 	a glycan:Saccharide;
-	glycan:glycosylates gcgs:14_0_4281.
+	glycan:glycosylates _:gcgs_14_0_4281.
 
 ### Glycosylation_site
-gcgs:14_0_4281
-	faldo:location gcl:14_0_4281.
+_:gcgs_14_0_4281
+	faldo:location _:gclp_14_0_4281.
 
 ### Exact Position
-gcl:14_0_4281
+_:gclp_14_0_4281
 	faldo:reference gcp:14.
 
 ### Protein
