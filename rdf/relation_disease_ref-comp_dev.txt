@@ -45,7 +45,7 @@
 <disease glyconnect url>
 	a obo:DOID_9351; # using disease ontology class
 	rdfs:labl "disease name";
-	rdf:values "DOID:9351".
+	skos:notation "DOID:9351".
 
 	
 ## Memo
