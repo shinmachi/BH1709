@@ -1,0 +1,44 @@
+prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> 
+prefix foaf:  <http://xmlns.com/foaf/0.1/> 
+
+# Class
+
+glycan:Glycosylation_site
+
+glycan:Disease_association
+
+sio:SIO_000897
+	rdfs:label association
+
+
+# Property
+
+glycan:glycosylates 
+	domain: Saccharide
+	range: Glycosylation_site
+
+foaf:primaryTopic
+	url: http://xmlns.com/foaf/spec/#term_primaryTopic
+	The primaryTopic property relates a document to the main thing that the document is about.
+
+glycan:is_glycosylated_on
+	domain: Compound
+	range: Glycosylation_site
+
+glycan:has_protein
+	domain: Referenced_compound
+	range: Protein
+
+glycan:has_association
+	domain: Referenced_compound
+	domain: sio:SIO_000897; # association
+
+glycan:is_glycosylated_by
+	domain: Glycosylation_site
+	range Compound
+
+skos:notation
+
+sio:SIO_000628 
+	rdfs:label refers to
+

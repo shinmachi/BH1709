@@ -12,6 +12,7 @@
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 
+
 <glycoprotein>
 	a glycan:Glycoprotein, glycan:Protein;
 	rdfs:label "protein name";
@@ -21,10 +22,13 @@
 
 <referenced comound>
 	a glycan:Referenced_compound;
-	glycan:has_protein <protein>;
+	glycan:has_protein <glycoprotein>;
 	glycan:published_in <citation>; 
 	glycan:is_from_source <source_natural>;
 	glycan:has_association <disease association>.
+
+<citation>
+	a glycan:Citation.
 
 <source_natural>
 	a glycan:Source_natural;
@@ -62,11 +66,3 @@
 # glycan:has_association
 # glycan:is_glycosylated_by
 # glycan:is_glycosylated_on
-
-
-
-
-
-
-
-
