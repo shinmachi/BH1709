@@ -18,7 +18,7 @@
 # Saccharide
 gcs:96 
 	a glycan:Saccharide;
-	foaf:primaryTopic <https://identifiers.org/G01614ZM>;
+	foaf:primaryTopic <https://identifiers.org/glytoucan/G01614ZM>;
 	rdfs:seeAlso <https://glytoucan.org/Structures/Glycans/G01614ZM>;
 	glycan:glycosylates _:gcgs_0_0_96.
 
