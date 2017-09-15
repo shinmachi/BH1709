@@ -1,0 +1,13 @@
+prefix glycan: <http://purl.jp/bio/12/glyco/glycan#> 
+
+# Class
+
+glycan:Glycosylation_site
+
+
+# Property
+
+glycan:glycosylates 
+domain: Saccharide
+range: Glycosylation_site
+
