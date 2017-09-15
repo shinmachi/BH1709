@@ -1,6 +1,9 @@
 # BH1709
 Developing Glycan RDF
 
+* rdf
+  * development rdf text
+
 ## ARQ Download
 
 * https://jena.apache.org/download/index.cgi
