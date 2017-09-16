@@ -17,3 +17,5 @@ An environment variable JENA_HOME is used by all the command line tools to confi
 
 * export JENA_HOME=the directory you downloaded Jena to
 * export PATH=$PATH:$JENA_HOME/bin
+
+* test: commit test
