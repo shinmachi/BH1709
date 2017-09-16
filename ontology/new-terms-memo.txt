@@ -39,7 +39,8 @@ glycan:is_glycosylated_by
 
 skos:notation
 
+up:commonName
+
 sio:SIO_000628 
 	rdfs:label refers to
-
 
